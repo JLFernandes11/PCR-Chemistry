@@ -224,11 +224,11 @@ match derivative:
             print("Error: Derivative values can only be 1 or 2") 
 # for deriv=2, polyorder has to be > 1.
 # this is because the Savgol filter devides the data into subsets. 
-# In this case, each subset data will have a first-order fit applied and then the seconde derivative. 
+# Each subset data will have a first-order fit applied and then the seconde derivative. 
 # The second derivative of a first-order (Ex: ax + b) is zero.
 # So each subset will have second derivative result as zero.
 
-# polyroder=1 and deriv=1 results in a consant but that's fine 
+# polyroder=1 and deriv=1 results in a consant but it's fine 
 # because each subset will have a constant value that it's different compared to the other subsets. 
 
 
@@ -470,7 +470,16 @@ result_df.to_csv(output_path, index=False)
 
 
 
-# Showing the statistical info and where the precdiced concentrations were saved
+# Showing the statistical info and where the precdiced concentrations were saved 
+
+window2 = tk.Tk()
+window2.title('All done!')
+window2.geometry("700x500")
+window2.config(bg="black")
+
+frame2 = tk.Frame(window2, bg="#1b2d34")
+frame2.pack(fill="both", expand=True, pady=60)
+
 msg = (
     f"Your PCR run is complete.\n\n"
     f"Predicted concentrations saved to:\n{output_path}\n\n\n"
@@ -480,8 +489,15 @@ msg = (
     f"MSE from Cross-validation:  {mscv:.3f}"
 )
 
-messagebox.showinfo(
-        title="All Done!",
-        message=msg)
+tk.Label(frame2, text=msg, bg="#1b2d34", fg="white", font=("Arial", 12), ).pack(pady=20)
+
+bottom_frame = tk.Frame(frame2, bg="#1b2d34")
+bottom_frame.pack(side="bottom", pady=20)
+
+close_button2 = tk.Button(bottom_frame, text="Done", command=window2.destroy)
+close_button2.pack(pady=4)
+
+
+window2.mainloop()
 
 
