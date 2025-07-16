@@ -33,4 +33,5 @@ You can test using the files:
   <li>sample_simulation.csv</li>
 </ul> 
 
+Afterwards, plots and some statistical parameters will be shown. At the end, the predictied concentrations for the sample will be saved as "predicted_concentrations.csv".
 
