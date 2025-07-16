@@ -1,9 +1,10 @@
 # PCR-Chemistry
+
 Principal Component Regression for chemical spectroscopy multivariate calibration. Written in Python with TKinter-based GUI. 
 
-It reads the spectral CSV data, performs Savitzky–Golay preprocessing, performs PCR multivariate calibration, and outputs predicted concentrations as a CSV file. 
+This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file.
 
-To run the PCR.py file you will need the following dependencies: 
+To run the PCR.py file make sure the following dependencies are installed: 
 <ul>
   <li>Pandas</li>
   <li>Numpy</li>
@@ -13,7 +14,7 @@ To run the PCR.py file you will need the following dependencies:
   <li>Customtkinter</li>
 </ul> 
 
-After running PCR.py, you will need to enter four .csv files:
+After running `PCR.py`, the GUI will prompt you to upload four `.csv` files:
 <ul>
   <li>Spectral data (absorbance) of the standards (training)</li>
   <li>Wavelength or wavenumber values the spectral data were colected</li>
@@ -21,11 +22,11 @@ After running PCR.py, you will need to enter four .csv files:
   <li>Spectral data (absorbance) of the sample</li>
 </ul> 
 
-The data in these files must be in the correct format as follows:
+Each file must follow a specific format:
 
 ![image_alt](https://github.com/JLFernandes11/PCR-Chemistry/blob/7e6930f361069db558a2df97395400513e6a7eee/Screenshot.png)
 
-You can test using the files:
+You can test the application using:
 <ul>
   <li>standards_spectral.csv</li>
   <li>wavelength.csv</li>
@@ -33,5 +34,9 @@ You can test using the files:
   <li>sample_simulation.csv</li>
 </ul> 
 
-Afterwards, plots and some statistical parameters will be shown. At the end, the predictied concentrations for the sample will be saved as "predicted_concentrations.csv".
+Output:
+<ul>
+  <li>Preprocessing and calibration plots will be shown.</li>
+  <li>Final predicted concentrations are saved as "predicted_concentrations.csv".</li>
+</ul> 
 
