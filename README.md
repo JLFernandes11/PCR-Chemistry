@@ -5,7 +5,7 @@ It reads the spectral CSV data, performs Savitzky–Golay preprocessing, perform
 
 To run the PCR.py file you will need the following dependencies: 
 <ul>
-  <li>Pandas/li>
+  <li>Pandas</li>
   <li>Numpy</li>
   <li>Matplotlib</li>
   <li>Scipy</li>
@@ -23,7 +23,14 @@ After running PCR.py, you will need to enter four .csv files:
 
 The data in these files must be in the correct format as follows:
 
+![image_alt](https://github.com/JLFernandes11/PCR-Chemistry/blob/7e6930f361069db558a2df97395400513e6a7eee/Screenshot.png)
 
-
+You can test using the files:
+<ul>
+  <li>standards_spectral.csv</li>
+  <li>wavelength.csv</li>
+  <li>standard_concentrations.csv</li>
+  <li>sample_simulation.csv</li>
+</ul> 
 
 
