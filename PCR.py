@@ -348,11 +348,6 @@ def plot_metrics(vals, ylabel, loc_best_MSE_R2):
         plt.plot(xticks, np.array(vals[:,1]), '-o', color='blue', mfc='blue', 
                  markersize=7, label = "Cross Validation")
         plt.plot(xticks[loc_best_MSE_R2], vals[loc_best_MSE_R2,1], 'P', ms=12, mfc='k')
-        """if objective=='min':
-            idx = np.argmin(vals[:,1])
-        else:
-            idx = np.argmax(vals[:,1])
-        plt.plot(xticks[idx], vals[idx,1], 'P', ms=12, mfc='k')"""
         plt.xlabel('Number of Principal Components', fontsize=14)
         plt.xticks = xticks
         plt.ylabel(ylabel, fontsize=14)
