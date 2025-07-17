@@ -458,7 +458,7 @@ result_df = pd.DataFrame(result, columns=data_y.columns)
 dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create output path in the same directory
-output_path = os.path.join(dir, 'predicted_concentrations.csv')
+output_path = os.path.join(dir, 'predicted_concentrations_pcr.csv')
 
 # Saving results as .csv file
 result_df.to_csv(output_path, index=False)
