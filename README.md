@@ -11,6 +11,7 @@ To run the PCR.py file make sure the following dependencies are installed:
   <li>Matplotlib</li>
   <li>Scipy</li>
   <li>Scikit-learn</li>
+  <li>Tkinter</li>
   <li>Customtkinter</li>
 </ul> 
 
@@ -37,6 +38,7 @@ You can test the application using:
 Output:
 <ul>
   <li>Preprocessing and calibration plots will be shown.</li>
+  <li>Model performance metrics will be shown.</li>
   <li>Final predicted concentrations are saved as "predicted_concentrations_pcr.csv".</li>
 </ul> 
 
