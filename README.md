@@ -4,7 +4,7 @@ Principal Component Regression for chemical spectroscopy multivariate calibratio
 
 This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file.
 
-To run the PCR.py file make sure the following dependencies are installed: 
+To run the `PCR.py` file make sure the following dependencies are installed: 
 <ul>
   <li>Pandas</li>
   <li>Numpy</li>
