@@ -93,7 +93,6 @@ button_openfile3.pack(side="top")
 button_openfile4.pack(side="top")
 
 # Creating a button to submit the data for analysis (closes the window)
-
 close_button = tk.Button(window, text="Submit", command=window.destroy)
 close_button.pack(side="bottom", pady=5)
 
@@ -199,7 +198,7 @@ data_X_sample = pd.read_csv(xs_path)
 
 X = data_X.to_numpy()
 y = data_y.to_numpy()
-wl = data_wl.to_numpy()
+wl = data_wl.to_numpy().flatten()
 X_sample = data_X_sample.to_numpy()
 
 
@@ -294,7 +293,7 @@ def pcr(X_centered, Y_centered, pc):
     return(y_cv, score_c, score_cv, mse_c, mse_cv)
 
 #... test with 8 components
-ncomp_test = 8
+ncomp_test = 8  # Increase this number if you want more components to be tested
 r2r_test = []
 r2cv_test = []
 mser_test = []
@@ -342,7 +341,7 @@ with plt.style.context(('default')):
     plt.ylabel('$2^{nd}$ Derivative of Absorbance', fontsize=14)
     plt.show()
 
-#... Plot the MSEs
+#... Plot the MSE and r²
 def plot_metrics(vals, ylabel, loc_best_MSE_R2):
     with plt.style.context('default'):
         plt.plot(xticks, np.array(vals[:,1]), '-o', color='blue', mfc='blue', 
@@ -484,7 +483,7 @@ msg = (
     f"MSE from Cross-validation:  {mscv:.3f}"
 )
 
-tk.Label(frame2, text=msg, bg="#1b2d34", fg="white", font=("Arial", 12), ).pack(pady=20)
+tk.Label(frame2, text=msg, bg="#1b2d34", fg="white", font=("Arial", 12)).pack(pady=20)
 
 bottom_frame = tk.Frame(frame2, bg="#1b2d34")
 bottom_frame.pack(side="bottom", pady=20)
