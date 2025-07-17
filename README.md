@@ -37,6 +37,6 @@ You can test the application using:
 Output:
 <ul>
   <li>Preprocessing and calibration plots will be shown.</li>
-  <li>Final predicted concentrations are saved as "predicted_concentrations.csv_pcr".</li>
+  <li>Final predicted concentrations are saved as "predicted_concentrations_pcr.csv".</li>
 </ul> 
 
