@@ -422,7 +422,7 @@ for i in range(Y_centered.shape[1]):
 
 # Calculating the concentrations for unknown samples
 
-def pcr_sample(X_sam_cen, Y_centered, pc, X_centered):
+def pcr_sample(X_sam_cen, Y_centered, pc, X_centered, scaler_Y):
 
     pca = PCA()
 
@@ -449,7 +449,7 @@ def pcr_sample(X_sam_cen, Y_centered, pc, X_centered):
     return(y_sample)
 
 # Getting the result (y_sample) from the function
-result = pcr_sample(X_sam_cen, Y_centered, pc, X_centered)
+result = pcr_sample(X_sam_cen, Y_centered, pc, X_centered, scaler_Y)
 
 # Making it pandas dataframe and inserting the columns label
 result_df = pd.DataFrame(result, columns=data_y.columns) 
