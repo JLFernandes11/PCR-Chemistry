@@ -321,7 +321,7 @@ d2X = savgol_filter(X, 18, polyorder=2, deriv=2)
 plt.figure(figsize=(7,5.5))
 with plt.style.context(('default')):
     plt.plot(wl, X.T)
-    plt.xlabel('Wavenumber ($cm^{-1}$)', fontsize=14)
+    plt.xlabel(data_wl.columns[0], fontsize=14)
     plt.ylabel('Absorbance (a.u.)', fontsize=14)
 plt.show()
 
@@ -329,7 +329,7 @@ plt.show()
 plt.figure(figsize=(7,5.5))
 with plt.style.context(('default')):
     plt.plot(wl, d1X.T, linewidth=1)
-    plt.xlabel('Wavenumber ($cm^{-1}$)', fontsize=14)
+    plt.xlabel(data_wl.columns[0], fontsize=14)
     plt.ylabel('$1^{st}$ Derivative of Absorbance', fontsize=14)
     plt.show()
 
@@ -337,7 +337,7 @@ with plt.style.context(('default')):
 plt.figure(figsize=(7,5.5))
 with plt.style.context(('default')):
     plt.plot(wl, d2X.T, linewidth=1)
-    plt.xlabel('Wavenumber ($cm^{-1}$)', fontsize=14)
+    plt.xlabel(data_wl.columns[0], fontsize=14)
     plt.ylabel('$2^{nd}$ Derivative of Absorbance', fontsize=14)
     plt.show()
 
