@@ -2,7 +2,13 @@
 
 Principal Component Regression for chemical spectroscopy multivariate calibration. Written in Python with TKinter-based GUI. 
 
-This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file.
+This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file. 
+
+# What is PCR
+
+The Principal Components Regression (PCR) is a combination of Ordinary Least Squares Regression (OLS) with **Principal Components Analysis** (PCA). PCA reduces the dimensionality of the spectral data while reducing the **multicollinearity**, this helps the model to differentiate the independent variables. Then, OLS models the linear relationship between the variables. As a result, PCR provides a multivariate model that is more robust than the classical calibration method. 
+
+***
 
 To run the `PCR.py` file make sure the following dependencies are installed: 
 <ul>
