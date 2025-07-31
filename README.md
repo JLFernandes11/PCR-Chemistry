@@ -6,9 +6,9 @@ This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, p
 
 # What is PCR
 
-The Principal Components Regression (PCR) is a combination of Ordinary Least Squares Regression (OLS) with **Principal Components Analysis** (PCA). PCA reduces the dimensionality of the spectral data while reducing the **multicollinearity**, this helps the model to differentiate the values of the independent variables. Then, OLS models the linear relationship between the variables. As a result, PCR provides a multivariate linear model that is more robust than the classical calibration method. 
+The Principal Components Regression (PCR) is a combination of Ordinary Least Squares Regression (OLS) with **Principal Components Analysis** (PCA). PCA reduces the dimensionality of the spectral data while reducing the **multicollinearity**, this helps the model to differentiate the values of the independent variables. Then, OLS models the linear relationship between the variables. As a result, PCR provides a multivariate linear model that is **more robust** than the classical calibration method. 
 
-In that process, the dimensionality of the spectral data is reduced to principal components, which the optimum number is determined by cross-validation. 
+In that process, the dimensionality of the spectral data is reduced to **principal components**, which the optimum number is determined by **cross-validation**. 
 
 ***
 
