@@ -2,7 +2,7 @@
 
 Principal Component Regression for chemical spectroscopy multivariate calibration. Written in Python with TKinter-based GUI. 
 
-This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing**, performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file. 
+This tool reads spectral CSV data, applies **Savitzky–Golay preprocessing** (applies desired polynomial and derivative), performs **PCR calibration**, and outputs the **predicted concentrations** as a CSV file. 
 
 # What is PCR
 
@@ -46,7 +46,7 @@ You can test the application using:
 Output:
 <ul>
   <li>Preprocessing and calibration plots will be shown.</li>
-  <li>Model performance metrics will be shown.</li>
+  <li>Model performance metrics will be shown (R² and Mean Squared Error from calibration and Cross-validation).</li>
   <li>Final predicted concentrations are saved as "predicted_concentrations_pcr.csv".</li>
 </ul> 
 
